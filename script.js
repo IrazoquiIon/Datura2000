@@ -51,6 +51,16 @@ const DAYS = Object.keys(SCHEDULE);
 const daySelector = document.getElementById("day-selector");
 const sessionsList = document.getElementById("sessions-list");
 const creneauSelect = document.getElementById("creneau");
+const jourSelect = document.getElementById("jour");
+
+function buildJourOptions() {
+  DAYS.forEach((day) => {
+    const opt = document.createElement("option");
+    opt.value = day;
+    opt.textContent = day;
+    jourSelect.appendChild(opt);
+  });
+}
 
 function buildDayButtons() {
   DAYS.forEach((day, i) => {
@@ -73,6 +83,7 @@ function selectDay(day, btnEl) {
   btnEl.classList.add("active");
   btnEl.setAttribute("aria-selected", "true");
   renderSessions(day);
+  jourSelect.value = day;
   populateCreneauOptions(day);
 }
 
@@ -102,8 +113,11 @@ function populateCreneauOptions(day) {
 }
 
 buildDayButtons();
+buildJourOptions();
 renderSessions(DAYS[0]);
 populateCreneauOptions(DAYS[0]);
+
+jourSelect.addEventListener("change", () => populateCreneauOptions(jourSelect.value));
 
 // ---------- Formulaire RDV ----------
 const form = document.getElementById("rdv-form");
@@ -130,7 +144,7 @@ form.addEventListener("submit", (e) => {
 function closeModal() {
   modalOverlay.classList.remove("open");
   form.reset();
-  populateCreneauOptions(document.querySelector(".day-btn.active")?.textContent || DAYS[0]);
+  populateCreneauOptions(jourSelect.value);
 }
 
 modalClose.addEventListener("click", closeModal);
