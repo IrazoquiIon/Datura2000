@@ -114,8 +114,8 @@ const modalOk = document.getElementById("modal-ok");
 
 const CONFIRMATIONS = [
   "RDV validé ! Amène tes gants et ta volonté. Le datura, lui, n'attend que toi.",
-  "C'est noté ! Le champ t'a déjà repéré. Il n'a pas l'air content.",
-  "Inscription confirmée. Prévois une gourde, une serviette, et de quoi pleurer un peu.",
+  "C'est noté ! Le champ t'attend, et crois-nous, tu vas repartir métamorphosé.",
+  "Inscription confirmée. Prévois une gourde, une serviette, et une bonne dose de motivation.",
   "RDV pris ! On garde ton créneau au chaud, contrairement à toi qui seras en plein soleil.",
 ];
 

@@ -335,6 +335,48 @@ h1, h2, h3 {
 .metrics strong { font-family: var(--font-display); font-size: 1.3rem; color: var(--purple-bright); }
 .metrics span { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
 
+/* ---------- Hype quote ---------- */
+.hype-quote {
+  margin-top: 40px;
+  background: var(--bg-card);
+  border: var(--border);
+  border-left: 8px solid var(--green-bright);
+  box-shadow: 6px 6px 0 var(--purple-bright);
+  padding: 40px 44px;
+  position: relative;
+  max-width: 780px;
+}
+
+.quote-mark {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--green-bright);
+  line-height: 1;
+  display: block;
+  margin-bottom: -8px;
+}
+
+.hype-text {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.hype-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hype-author strong { font-size: 0.95rem; }
+
+.hype-author span {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* ---------- Pricing ---------- */
 .pricing-grid {
   display: grid;
